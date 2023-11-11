@@ -56,21 +56,20 @@ class Student:
             print("Tuition Fee: $", self.tuitionFee)
 
 
-class Regular:
+class Regular(Student):
 
     def __init__(self, enrollmentid, dateofbirth, coursename, studentname, dateofenrollement, courseduration, tuitionfee, numofmodules, numofcredithours, dayspresent):
 
-        self.numOfModules = 0
-        self.numOfCreditHours = 0
-        self.daysPresent = 0
+        self.numOfModules = numofmodules
+        self.numOfCreditHours = numofcredithours
+        self.daysPresent = dayspresent
         self.isGrantedScholarship = bool
-        
-        self.Student(dateofbirth, studentname, courseduration, tuitionfee)
-        self.set_coursename(coursename)
 
-    # def Student(self, dateofbirth, studentname, courseduration, tuitionfee):
-    #     pass
-    #
-    # def set_coursename(self, coursename):
-    #     pass
+
+        super().__init__(self, dateofbirth, studentname, courseduration, tuitionfee)
+        self.set_coursename(coursename)
+        self.set_enrollmentid(enrollmentid)
+        self.set_dateofenrollment(dateofenrollement)
+
+        
         
